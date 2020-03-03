@@ -8,6 +8,7 @@
 import Sighting from './Sighting';
 import SightingService from '../services/SightingService.js';
 import {eventBus} from '../main';
+
 export default {
 	name: "sightings-grid",
 	data () {
@@ -33,7 +34,7 @@ export default {
   methods: {
     fetchData(){
       SightingService.getSightings()
-      .then(sightings => this.sightings = sightings);
+      .then(data => this.sightings = data);
     }
   }
 
